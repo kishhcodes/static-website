@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centering the navigation bar */
+.navigation {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Aligns items vertically */
+    width: 100%;
+    background-color: #f8f8f8; /* Optional background */
+    padding: 15px 0;
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    display: flex;
+    gap: 30px; /* Space between links */
+}
+
+/* Styling the links */
+.nav-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-family: 'Cormorant Garamond', serif;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.nav-menu a:hover {
+    color: gray;
+}
+
+.image1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+}
+
+
+/* Default Light Mode */
+:root {
+    --bg-color: #f8f8f8;
+    --text-color: #000;
+    --nav-bg: #ffffff;
+    --nav-text: #000;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #111;
+    --text-color: #fff;
+    --nav-bg: #000;   /* Black Nav Bar */
+    --nav-text: #fff; /* White Text */
+}
+
+/* Apply Theme */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+/* Style Navigation */
+.navigation {
+    background-color: var(--nav-bg);
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Style Navigation Links */
+.nav-menu a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+    color: var(--nav-text);
+    transition: color 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    color: gray;
+}
+
+.collection-list-wrapper {
+    display: flex;
+    justify-content: center; /* Center the grid */
+}
+
+.collection-list-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 80px; /* Adjusts spacing */
+    max-width: 900px; /* Adjust this to fit your design */
+    width: 100%;
+}
+
+.collection-list-2 img {
+    width: 100%; /* Make all images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure uniform size */
+}
+
